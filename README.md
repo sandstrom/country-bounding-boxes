@@ -1,20 +1,27 @@
 # Country Bounding Boxes
 
-Useful when zooming a map to a specific country in Mapbox, Google Maps or similar services.
+A list of ISO 3166-1 country codes and their bounding boxes. Useful when zooming a map 
+to a specific country in Mapbox, Google Maps or similar services.
 
-If complete polygons for each country is needed, use the raw data in the Natural Earth dataset instead (see source below).
+The boxes are confined to the primary area for each country. Outlying territory are excluded 
+(for example, the US bounding box does not contain Pacific islands such as Guam).
+
+Feel free to PR suggested changes (bounding boxes for missing countries or updates to existing boxes).
+
+*If complete polygons for each country is needed, use the raw data in the Natural Earth 
+dataset instead (see source below).*
 
 ## Example
 
 ```json
 {
-  "AF": ["Afghanistan", [60.5284298033, 29.318572496, 75.1580277851, 38.4862816432]],
-  "AO": ["Angola", [11.6400960629, -17.9306364885, 24.0799052263, -4.43802336998]],
-  "AL": ["Albania", [19.3044861183, 39.624997667, 21.0200403175, 42.6882473822]],
-  "AE": ["United Arab Emirates", [51.5795186705, 22.4969475367, 56.3968473651, 26.055464179]],
-  "AR": ["Argentina", [-73.4154357571, -55.25, -53.628348965, -21.8323104794]],
-  "AM": ["Armenia", [43.5827458026, 38.7412014837, 46.5057198423, 41.2481285671]],
-  "AQ": ["Antarctica", [-180.0, -90.0, 180.0, -63.2706604895]],
+  "AF": ["Afghanistan", [60.53, 29.32, 75.16, 38.49]],
+  "AO": ["Angola", [11.64, -17.93, 24.08, -4.44]],
+  "AL": ["Albania", [19.3, 39.62, 21.02, 42.69]],
+  "AE": ["United Arab Emirates", [51.58, 22.5, 56.4, 26.06]],
+  "AR": ["Argentina", [-73.42, -55.25, -53.63, -21.83]],
+  "AM": ["Armenia", [43.58, 38.74, 46.51, 41.25]],
+  "AQ": ["Antarctica", [-180.0, -90.0, 180.0, -63.27]],
   "…"
 }
 ```
